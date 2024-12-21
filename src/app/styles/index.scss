@@ -22,3 +22,8 @@ body {
   flex-grow: 1;
   padding: 20px;
 }
+
+.theme-div {
+  color: var(--primary-color);
+  background-color: var(--bg-color);
+}

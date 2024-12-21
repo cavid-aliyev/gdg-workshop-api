@@ -7,6 +7,7 @@ import { AppLink, AppLinkTheme } from "@Shared/ui/AppLink/Applink";
 import { RoutePath } from "@Shared/config/rootConfig/routeConfig";
 import AboutIcon from "@Shared/assets/icons/Docs";
 import MainIcon from "@Shared/assets/icons/Home";
+import GDGLogo from "@Shared/assets/images/logo.png";
 
 interface ISidebarProps {
   className?: string;
@@ -33,6 +34,9 @@ export const Sidebar: React.FC<ISidebarProps> = props => {
         {collapsed ? ">" : "<"}
       </Button>
       <div className={cls.items}>
+        <div className={classNames(cls.logo, { [cls.collapsed]: collapsed })}>
+          <img src={GDGLogo} alt="GDG" />
+        </div>
         <div className={cls.item}>
           <MainIcon className={cls.icon} />
           <AppLink theme={AppLinkTheme.SECONDARY} to={RoutePath.main} className={cls.link}>
