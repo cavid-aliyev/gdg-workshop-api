@@ -1,7 +1,41 @@
 {
   "files": [],
-  "references": [
-    { "path": "./tsconfig.app.json" },
-    { "path": "./tsconfig.node.json" }
-  ]
+  "references": [{ "path": "./tsconfig.app.json" }, { "path": "./tsconfig.node.json" }],
+  "compilerOptions": {
+    "allowJs": true,
+    "alwaysStrict": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "module": "esnext",
+    "moduleResolution": "node",
+    "noEmit": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "target": "esnext",
+    "baseUrl": "./src",
+    "paths": {
+      "@App": ["app"],
+      "@App/*": ["app/*"],
+      "@Entities": ["entities"],
+      "@Entities/*": ["entities/*"],
+      "@Features": ["features"],
+      "@Features/*": ["features/*"],
+      "@Pages": ["pages"],
+      "@Pages/*": ["pages/*"],
+      "@Shared": ["shared"],
+      "@Shared/*": ["shared/*"],
+      "@Widgets": ["widgets"],
+      "@Widgets/*": ["widgets/*"]
+    }
+  },
+
+  "exclude": ["node_modules", "dist", "out", "**/*.scss", "lint-staged.config.js"],
+  "include": ["src/**/*.ts", "src/**/*.tsx"]
 }
