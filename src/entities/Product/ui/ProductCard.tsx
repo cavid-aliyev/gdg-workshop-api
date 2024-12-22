@@ -1,9 +1,9 @@
 import React from "react";
-import { Product } from "../model/types";
+import { IProduct } from "../model/types";
 import cls from "./ProductCard.module.scss";
 
 interface ProductCardProps {
-  product: Product;
+  product: IProduct.Product;
 }
 
 export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {

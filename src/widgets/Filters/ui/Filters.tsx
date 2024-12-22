@@ -23,11 +23,6 @@ export const Filters: React.FC<FiltersProps> = ({ onChange }) => {
         placeholder="Max Price"
         onChange={e => onChange("max_price", e.target.valueAsNumber)}
       />
-      <select onChange={e => onChange("ordering", e.target.value)}>
-        <option value="">Sort by</option>
-        <option value="price">Price</option>
-        <option value="views">Views</option>
-      </select>
     </div>
   );
 };

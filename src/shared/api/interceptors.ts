@@ -33,6 +33,26 @@ apiInstance.interceptors.response.use(
           alert("Bad Request: Please check your input.");
           break;
 
+        case 404:
+          console.error("Not Found:", data.message || "The requested resource was not found.");
+          alert("Not Found: The requested resource could not be found.");
+          break;
+
+        case 500:
+          console.error(
+            "Internal Server Error:",
+            data.message || "Something went wrong on the server."
+          );
+          alert("Server Error: Please try again later.");
+          break;
+
+        case 503:
+          console.error(
+            "Service Unavailable:",
+            data.message || "The server is currently unavailable."
+          );
+          alert("Service Unavailable: Please try again later.");
+          break;
         default:
           console.error(`HTTP Error ${status}:`, data.message || "An unexpected error occurred.");
           alert(`Error ${status}: ${data.message || "An unexpected error occurred."}`);

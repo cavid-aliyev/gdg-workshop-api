@@ -16,7 +16,7 @@ const defaultHeaders: Record<string, string> = {};
 export const Http = {
   Request: async <A>({ url, params, options, auth, req }: Props): Promise<A> => {
     try {
-      console.log(auth, req);
+      console.log(auth, req, "Http console");
 
       // Example: Add Authorization header dynamically
       // if (auth) {
